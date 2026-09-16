@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь — ЛанчBox</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Ланч<span>Box</span></h1>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="feedback.html" class="contacts-link">Обратная связь</a>
+                <a href="login.html">Вход</a>
+                <a href="index.html#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <section class="form-section">
+                <h2>Форма обратной связи</h2>
+                <p class="form-intro">
+                    Заполните форму — мы обязательно свяжемся с вами в течение одного рабочего дня.
+                </p>
+
+                <form
+                    action="https://httpbin.org/post"
+                    method="POST"
+                    enctype="multipart/form-data"
+                    class="feedback-form"
+                >
+
+                    <div class="form-group">
+                        <label for="fio">ФИО <span class="required">*</span></label>
+                        <input
+                            type="text"
+                            id="fio"
+                            name="fio"
+                            placeholder="Иванов Иван Иванович"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@mail.ru"
+                            required
+                        >
+                    </div>
+
+                    <fieldset class="form-group">
+                        <legend>Откуда вы узнали о нас?</legend>
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="reklama" checked>
+                            Реклама в интернете
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="druzya">
+                            От друзей и коллег
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="poisk">
+                            Поисковые системы
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="drugoy">
+                            Другое
+                        </label>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="type">Тип обращения</label>
+                        <select id="type" name="type">
+                            <option value="complaint">Жалоба</option>
+                            <option value="suggestion">Предложение</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Текст сообщения <span class="required">*</span></label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Опишите вашу ситуацию или идею..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attachment">Вложения</label>
+                        <input type="file" id="attachment" name="attachment">
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="consent" value="yes" required>
+                            Даю согласие на обработку персональных данных
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn">Отправить</button>
+
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-contacts">
+                <p><strong>ЛанчBox</strong> — доставка бизнес-ланчей в Москве</p>
+                <p>Телефон: <a href="tel:+74951234567">8 (800) 555-35-35</a></p>
+                <p>Email: <a href="mailto:order@lunchbox.ru">order@lunchbox.ru</a></p>
+            </div>
+            <div class="footer-brand">
+                Ланч<span>Box</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
