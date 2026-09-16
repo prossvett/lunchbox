@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 16px 0;
+    border-bottom: 2px solid #ccc;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #000;
+}
+
+header h1 span {
+    font-weight: 300;
+    color: #666;
+}
+
+nav {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: #eee;
+}
+
+nav a.contacts-link:hover {
+    background-color: #ddd;
+}
+
+main {
+    flex: 1;
+    padding: 30px 0 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+}
+
+.about-wrapper {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.about-wrapper img {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    flex-shrink: 0;
+}
+
+.about-wrapper p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    flex: 1;
+    min-width: 180px;
+}
+
+.advantages ul {
+    list-style: disc;
+    padding-left: 24px;
+    margin-top: 6px;
+}
+
+.advantages ul li {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    padding: 4px 0;
+}
+
+.table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    border: 1px solid #ccc;
+}
+
+.table-wrap thead {
+    background-color: #eaeaea;
+    color: #000;
+}
+
+.table-wrap thead th {
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 700;
+    border-bottom: 2px solid #aaa;
+}
+
+.table-wrap tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    color: #000;
+}
+
+.table-wrap tbody tr:last-child td {
+    border-bottom: none;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 24px 0 20px;
+    margin-top: 10px;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+footer .footer-contacts p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ddd;
+    margin: 0;
+}
+
+footer .footer-contacts a {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #aaa;
+    text-decoration: none;
+}
+
+footer .footer-contacts a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer .footer-brand {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+footer .footer-brand span {
+    color: #aaa;
+}
+
+@media (max-width: 700px) {
+    header .container {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    nav {
+        justify-content: center;
+    }
+    .about-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-wrapper img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        aspect-ratio: 16 / 10;
+    }
+    section {
+        padding: 16px 0;
+    }
+    .table-wrap table {
+        font-size: 14px;
+    }
+    .table-wrap thead th,
+    .table-wrap tbody td {
+        padding: 8px 8px;
+    }
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+    header h1 {
+        font-size: 22px;
+    }
+    nav a {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+    section h2 {
+        font-size: 20px;
+    }
+}
