@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Собрать ланч — ЛанчBox</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="build.css">
+    <link rel="stylesheet" href="print.css" media="print">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>Ланч<span>Box</span></h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="build.html" class="active">Собрать ланч</a>
+            <a href="feedback.html">Обратная связь</a>
+            <a href="login.html">Вход</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+
+        <section class="menu-section">
+            <h2>Супы</h2>
+            <div class="dishes-grid">
+
+                <div class="dish-card">
+                    <img src="images/soup1.jpg" alt="Том Ям с креветками">
+                    <p class="price">365₽</p>
+                    <p class="name">Том Ям с креветками</p>
+                    <p class="weight">300 мл</p>
+                    <button type="button">Добавить</button>
+                </div>
+
+                <div class="dish-card">
+                    <img src="images/soup2.jpg" alt="Норвежский суп">
+                    <p class="price">270₽</p>
+                    <p class="name">Норвежский суп</p>
+                    <p class="weight">300 мл</p>
+                    <button type="button">Добавить</button>
+                </div>
+
+                <div class="dish-card">
+                    <img src="images/soup3.jpg" alt="Куриный суп с фрикадельками">
+                    <p class="price">250₽</p>
+                    <p class="name">Куриный суп с фрикадельками</p>
+                    <p class="weight">300 мл</p>
+                    <button type="button">Добавить</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Главные блюда</h2>
+            <div class="dishes-grid">
+
+                <div class="dish-card">
+                    <img src="images/main1.jpg" alt="Лазанья">
+                    <p class="price">385₽</p>
+                    <p class="name">Лазанья</p>
+                    <p class="weight">350 г</p>
+                    <button type="button">Добавить</button>
+                </div>
+
+                <div class="dish-card">
+                    <img src="images/main2.jpg" alt="Сендвичи с курицой и сыром">
+                    <p class="price">225₽</p>
+                    <p class="name">Сендвичи с курицой и сыром</p>
+                    <p class="weight">320 г</p>
+                    <button type="button">Добавить</button>
+                </div>
+
+                <div class="dish-card">
+                    <img src="images/main3.jpg" alt="Поке с тунцом и овощами">
+                    <p class="price">250₽</p>
+                    <p class="name">Поке с тунцом и овощами</p>
+                    <p class="weight">280 г</p>
+                    <button type="button">Добавить</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Напитки</h2>
+            <div class="dishes-grid">
+
+                <div class="dish-card">
+                    <img src="images/drink1.jpg" alt="Апельсиновый сок">
+                    <p class="price">120₽</p>
+                    <p class="name">Апельсиновый сок</p>
+                    <p class="weight">300 мл</p>
+                    <button type="button">Добавить</button>
+                </div>
+
+                <div class="dish-card">
+                    <img src="images/drink2.jpg" alt="Яблочный сок">
+                    <p class="price">90₽</p>
+                    <p class="name">Яблочный сок</p>
+                    <p class="weight">300 мл</p>
+                    <button type="button">Добавить</button>
+                </div>
+
+                <div class="dish-card">
+                    <img src="images/drink3.jpg" alt="Морковный сок">
+                    <p class="price">110₽</p>
+                    <p class="name">Морковный сок</p>
+                    <p class="weight">300 мл</p>
+                    <button type="button">Добавить</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="order-section">
+            <h2>Сделать заказ</h2>
+            <form action="https://httpbin.org/post" method="POST" class="order-form">
+
+                <div class="order-columns">
+
+                    <div class="order-col">
+                        <h3>Ваш заказ</h3>
+
+                        <div class="form-group">
+                            <label for="soup">Суп</label>
+                            <select id="soup" name="soup">
+                                <option value="">— Выберите суп —</option>
+                                <option value="tom-yam">Том Ям с креветками</option>
+                                <option value="norwegian">Норвежский суп</option>
+                                <option value="chicken">Куриный суп с фрикадельками</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="main">Главное блюдо</label>
+                            <select id="main" name="main">
+                                <option value="">— Выберите главное блюдо —</option>
+                                <option value="lasagna">Лазанья</option>
+                                <option value="sandwich">Сендвичи с курицой и сыром</option>
+                                <option value="poke">Поке с тунцом и овощами</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="drink">Напиток</label>
+                            <select id="drink" name="drink">
+                                <option value="">— Выберите напиток —</option>
+                                <option value="orange">Апельсиновый сок</option>
+                                <option value="apple">Яблочный сок</option>
+                                <option value="carrot">Морковный сок</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comment">Комментарии к заказу</label>
+                            <textarea id="comment" name="comment" rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="order-col">
+                        <h3>Ваши данные</h3>
+
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="order-email">Email</label>
+                            <input type="email" id="order-email" name="email">
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subscribe" value="yes">
+                                Получать информацию о скидках и акциях
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Адрес доставки</label>
+                            <input type="text" id="address" name="address">
+                        </div>
+
+                        <p class="order-note">Доставка осуществляется только по Москве</p>
+
+                        <fieldset class="form-group">
+                            <legend>Время доставки:</legend>
+                            <label class="radio-label">
+                                <input type="radio" name="time" value="asap" checked>
+                                Как можно скорее
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="time" value="exact">
+                                К указанному времени
+                            </label>
+                        </fieldset>
+
+                        <div class="form-group">
+                            <label for="exact-time">Укажите время доставки</label>
+                            <input type="time" id="exact-time" name="exact_time">
+                            <small class="order-note">Доступное время доставки с 7:00 до 23:00</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="order-actions">
+                    <button type="reset" class="btn-secondary">Сбросить</button>
+                    <button type="submit" class="btn">Отправить</button>
+                </div>
+
+            </form>
+        </section>
+
+    </div>
+</main>
+
+<footer id="contacts">
+    <div class="container">
+        <div class="footer-contacts">
+            <p><strong>ЛанчBox</strong> — доставка бизнес-ланчей в Москве</p>
+            <p>Телефон: <a href="tel:+74951234567">8 (800) 555-35-35</a></p>
+            <p>Email: <a href="mailto:order@lunchbox.ru">order@lunchbox.ru</a></p>
+            <p>Москва, ул. Пушкина, д. 67</p>
+        </div>
+        <div class="footer-brand">
+            Ланч<span>Box</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

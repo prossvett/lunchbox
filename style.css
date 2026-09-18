@@ -47,7 +47,7 @@ header h1 span {
 
 nav {
     display: flex;
-    gap: 4px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
@@ -57,17 +57,16 @@ nav a {
     font-weight: 500;
     color: #000;
     text-decoration: none;
-    padding: 6px 12px;
-    border: 1px solid transparent;
+    padding: 6px 0;
 }
 
 nav a:hover {
+    color: tomato;
     text-decoration: underline;
-    background-color: #eee;
 }
 
-nav a.contacts-link:hover {
-    background-color: #ddd;
+nav a.active {
+    color: tomato;
 }
 
 main {
@@ -232,7 +231,7 @@ footer .footer-brand span {
 }
 
 .form-group .required {
-    color: #c0392b;
+    color: tomato;
 }
 
 .form-group input[type="text"],
@@ -250,9 +249,7 @@ footer .footer-brand span {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group input[type="password"]:focus,
+.form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     border-color: #000;
@@ -370,60 +367,88 @@ input[type="file"] {
 }
 
 .login-back a:hover {
-    color: #000;
+    color: tomato;
     text-decoration: underline;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+    header nav {
+        justify-content: space-between;
+    }
+
+    .about-wrapper img {
+        width: 500px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
     header .container {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         text-align: center;
     }
-    nav {
-        justify-content: center;
+
+    header h1 {
+        font-size: 24px;
+        text-align: center;
     }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
     .about-wrapper {
         flex-direction: column;
         align-items: center;
     }
+
     .about-wrapper img {
         width: 100%;
-        max-width: 400px;
         height: auto;
         aspect-ratio: 16 / 10;
     }
-    section {
-        padding: 16px 0;
-    }
+
     .table-wrap table {
-        font-size: 14px;
+        font-size: 13px;
     }
+
     .table-wrap thead th,
     .table-wrap tbody td {
-        padding: 8px 8px;
+        padding: 8px;
     }
+
     footer .container {
         flex-direction: column;
         text-align: center;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     .container {
         padding: 0 12px;
     }
+
     header h1 {
         font-size: 22px;
     }
-    nav a {
-        font-size: 14px;
-        padding: 4px 8px;
-    }
+
     section h2 {
         font-size: 20px;
     }
-    .login-form {
-        padding: 24px 18px;
+
+    .table-wrap table {
+        font-size: 11px;
+    }
+
+    .table-wrap thead th,
+    .table-wrap tbody td {
+        padding: 6px 4px;
     }
 }

@@ -1,0 +1,99 @@
+header nav,
+footer .footer-brand,
+button,
+.btn,
+.btn-secondary,
+form,
+input,
+select,
+textarea,
+.login-form,
+.login-back {
+    display: none !important;
+}
+
+body {
+    background: #ffffff;
+    color: #000000;
+    font-size: 12pt;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #000000;
+    padding: 8px 0;
+}
+
+header h1 {
+    color: #000000;
+    font-size: 18pt;
+}
+
+main {
+    padding: 0;
+}
+
+section {
+    border: none;
+    padding: 0;
+    margin-bottom: 16px;
+    page-break-inside: avoid;
+}
+
+section h2 {
+    border-bottom: 1px solid #000000;
+    font-size: 14pt;
+}
+
+.dishes-grid {
+    display: block;
+}
+
+.dish-card {
+    border: 1px solid #cccccc;
+    filter: none;
+    box-shadow: none;
+    padding: 10px;
+    border-radius: 0;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+}
+
+.dish-card img {
+    max-width: 200px;
+    border-radius: 0;
+}
+
+.dish-card .price {
+    font-size: 14pt;
+}
+
+.dish-card .name {
+    font-size: 12pt;
+}
+
+.dish-card .weight {
+    color: #555555;
+}
+
+table {
+    border: 1px solid #000000;
+    font-size: 11pt;
+}
+
+footer {
+    background: #ffffff;
+    color: #000000;
+    border-top: 1px solid #000000;
+    padding: 8px 0;
+}
+
+footer .footer-contacts p,
+footer .footer-contacts a {
+    color: #000000;
+}
+
+a {
+    color: #000000;
+    text-decoration: underline;
+}
